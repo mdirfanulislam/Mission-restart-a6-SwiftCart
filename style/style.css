@@ -1,0 +1,34 @@
+.product-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.category-btn.active {
+    background-color: hsl(var(--p));
+    color: white;
+    border-color: hsl(var(--p));
+}
+
+.modal-product-image {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading-shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(to right, #f6f7f8 4%, #edeef1 25%, #f6f7f8 36%);
+    background-size: 1000px 100%;
+}
